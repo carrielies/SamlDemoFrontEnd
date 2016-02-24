@@ -1,0 +1,5 @@
+GET            /assets/*file                                                controllers.Assets.at(path="/public", file)
+
+->             /template                                                    template.Routes
+
+GET            /                                                            controllers.HomeController.welcome

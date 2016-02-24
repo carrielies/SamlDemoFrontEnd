@@ -1,0 +1,289 @@
+
+
+.tick{
+  position:inherit;
+  padding-right:10px;
+  left:590px;
+  top:230px;
+ }
+
+#banner h1 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #fff;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 36px;
+  line-height: 1.11111;
+  font-weight: 400;
+  text-transform: none;
+  font-weight: 700;
+}
+
+.greenBanner {
+    background-color:#28a197;
+    color:white;
+    text-align:center;
+    padding:10px;
+    padding-bottom:20px;
+}
+
+.summaryReturnBanner {
+    background-color:#28a197;
+    min-height: 10px;
+    overflow:hidden;
+    color:white;
+    text-align:center;
+    min-width:100%;
+    padding:10px;
+    box-sizing:border-box;
+}
+
+label.avoidanceScheme {
+    display: inline;
+}
+
+.form-control.avoidanceSchemeInp {
+    float:right;
+    width:35%;
+}
+
+.avoidanceRight {
+    text-align:right;
+}
+
+.logged-out-page textarea {
+  width: 100%;
+  padding: 0px;
+  background-color: white;
+  border: 1px solid #bfc1c3;
+}
+.logged-out-page legend, .logged-out-page #howCanWeImprove_field label {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.warning-weight{
+    font-weight: 600;
+    margin-left:50px;
+}
+
+.importantIcon {
+    float:left;
+    width:35px;
+    height:35px;
+    margin-top:0%;
+    margin-bottom:0%;
+}
+
+.importantIconReviewAgent {
+    float:left;
+    width:38px;
+    height:38px;
+    margin-top:80px;
+    margin-bottom:5%;
+}
+
+.confirmation-notice {
+}
+
+.icon-important {
+    background-repeat: no-repeat;
+    float: left;
+    height: 38px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-top: 0px;
+    width: 36px;
+}
+
+.userName {
+    margin-top: 1.5%;
+    font-weight: 400;
+    display: block;
+    color: #6f777b;
+    float:right;
+}
+
+.heading-xlarge {
+    margin-bottom: 0.8em;
+    margin-top:0em;
+}
+
+.heading-medium {
+    margin-top: 1em;
+}
+
+.heading-sub {
+    font-size: 24px;
+    color: #808080;
+    margin-bottom:0.4em;
+}
+
+/*-----------------------*/
+/*---aside---*/
+/*-----------------------*/
+
+.related {
+    box-sizing: border-box;
+    margin-top: 5px;
+    padding: 0 15px;
+    padding-top:5px;
+    float:right;
+    width:36.2%;
+}
+
+@media screen and (max-width: 640px) {
+.related {
+        float:None;
+        width:100%;
+        padding: 0;
+    }
+}
+
+fieldset legend{
+    float:none;
+}
+
+.balance-display{
+  margin-bottom:4px;
+  margin-top:4px;
+}
+
+.custom-combobox {
+    position: relative;
+    display: inline-block;
+}
+
+.custom-combobox-toggle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-left: -1px;
+    padding: 0;
+}
+
+.custom-combobox-input {
+    margin: 0;
+    padding: 5px 10px;
+}
+
+.td-top {
+vertical-align: top;
+}
+
+@media screen and (min-width: 480px) {
+    input[type=number] {
+    -moz-appearance: textfield;
+    }
+
+    ::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    }
+
+    ::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    }
+
+}
+
+.ated-banner {
+    width: 100%;
+    height:40px;
+    background-color: #cceeff;
+    border-left: 4px solid #005580;
+    line-height:40px;
+    padding-left:10px;
+    padding-right:0px;
+    margin-bottom:20px;
+
+}
+
+.field-1-4 {
+    width: 25%;
+}
+
+.error {
+    border: 5px solid #b10e1e;
+}
+
+.view-edit-btn.button  {
+    font-size:1em;
+    width:90px;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.touchevents .date-of-birth {
+    display: block;
+}
+
+.blue-line {
+    border-top: 10px solid #005ea5;
+}
+
+.link-back {
+    display: -moz-inline-stack;
+    display: inline-block;
+    position: relative;
+    font-family: "nta", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.1428571429;
+    font-weight: 400;
+    text-transform: none;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left: 14px;
+    color: #0b0c0c;
+    text-decoration: none;
+    border-bottom: 1px solid #0b0c0c;
+}
+
+.link-back:link, .link-back:visited, .link-back:hover, .link-back:active {
+    color: #0b0c0c;
+}
+
+@media (min-width: 641px)
+.link-back {
+    font-size: 16px;
+    line-height: 1.25;
+}
+
+.link-back:link,
+.link-back:visited,
+.link-back:hover,
+.link-back:active {
+  color: #0b0c0c;
+}
+
+.link-back::before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-right: 6px solid #0b0c0c;
+  border-bottom: 5px solid transparent;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -6px;
+}
+
+.date-form-group {
+    clear: none;
+    float: left;
+    margin-right: 20px;
+    width: 50px;
+    margin-bottom:0px;
+}
+
+.date-legend {
+    margin-bottom:0px;
+}
+
+.supporting-info {
+    width: 100%;
+    height: 140px;
+}

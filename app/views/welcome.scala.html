@@ -1,0 +1,25 @@
+@(implicit request: Request[_])
+
+@import uk.gov.hmrc.play.views.html._
+@import uk.gov.hmrc.play.views.html.helpers._
+@import views.html.helpers._
+
+@noAuthMain(title = Messages("saml.welcome.title"), userLoggedIn = false, sidebarLinks=None, sidebarClass = Some("related")) {
+
+    <h1 class="heading-xlarge" id="welcome-header">
+        @Messages("saml.welcome.header")
+    </h1>
+
+    <div class="form-group">
+
+        <p class=text" id="welcome-text">
+            @Messages("saml.welcome.text")
+        </p>
+
+    </div>
+
+
+
+
+}
+

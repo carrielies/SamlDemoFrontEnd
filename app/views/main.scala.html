@@ -1,0 +1,108 @@
+@(applicationConfig: config.ApplicationConfig = config.ApplicationConfig,
+supportLinkEnabled: Boolean = false,
+title: String,
+serviceInfoContent: Option[Html] = None,
+actingAttorneyBanner: Option[Html] = Some(HtmlFormat.empty),
+sidebarLinks: Option[Html] = None,
+sidebarClass: Option[String] = None,
+contentHeader: Option[Html] = None,
+userLoggedIn: Boolean = false,
+scriptElement: Option[Html] = None,
+linkElement : Option[Html] = None,
+attorney: Option[uk.gov.hmrc.play.frontend.auth.Attorney] = None,
+principalName: Option[String] = None
+)(mainContent: Html = HtmlFormat.empty)(implicit request: Request[_])
+
+@import layouts.{govuk_template => hmrcGovUkTemplate}
+@import uk.gov.hmrc.play.views.html.{layouts => uiLayouts}
+@import uk.gov.hmrc.play.views.html.{helpers => uiHelpers}
+
+@head = {
+@uiLayouts.head(
+assetsPrefix = applicationConfig.assetsPrefix,
+linkElem = linkElement,
+headScripts = None)
+<meta name="format-detection" content="telephone=no"/>
+@views.html.helpers.ga(applicationConfig.analyticsToken.getOrElse("UA-123456"))
+}
+
+@headerNavLinks = {
+@if(userLoggedIn){
+<li>Sign out</li>
+}
+}
+
+
+@article = {
+
+@uiLayouts.article(content = mainContent, includeGridWrapper = false, articleClasses = None)
+
+}
+
+@sidebar = {
+@uiLayouts.sidebar(sidebarLinks = sidebarLinks.fold(HtmlFormat.empty)(x=>x), sidebarClass = sidebarClass)
+}
+
+@insideHeader = {
+@uiLayouts.header_nav(
+navTitle = Some(Messages("ated.navTitle")),
+navTitleLink = None,
+showBetaLink = false,
+navLinks = Some(headerNavLinks))
+}
+
+@afterHeader = {}
+
+@bodyEnd = {
+@uiLayouts.footer(
+analyticsToken = applicationConfig.analyticsToken,
+analyticsHost = applicationConfig.analyticsHost,
+assetsPrefix = applicationConfig.assetsPrefix,
+ssoUrl = None,
+scriptElem = scriptElement,
+gaCalls = None)
+}
+
+@footerTop = {}
+@footerLinks = {}
+
+@betaBanner = {
+@uiLayouts.betaBanner(
+userLoggedIn = userLoggedIn,
+betaFeedbackUrl = applicationConfig.betaFeedbackUrl,
+betaFeedbackUnauthenticatedUrl = applicationConfig.betaFeedbackUnauthenticatedUrl,
+showFeedbackLinkInBetaBanner = true)
+}
+
+@serviceInfo = {
+@uiLayouts.serviceInfo(
+betaBanner = betaBanner,
+includeGridWrapper = false,
+serviceInfoContent = serviceInfoContent)
+}
+
+
+@getHelpForm = {
+@if(supportLinkEnabled) {
+@{uiHelpers.reportAProblemLink(config.ApplicationConfig.reportAProblemPartialUrl, config.ApplicationConfig.reportAProblemNonJSUrl)}
+}
+}
+
+
+
+@mainContentHeader = {
+@contentHeader.map { contentHeaderVal =>
+@uiLayouts.main_content_header(contentHeader = contentHeaderVal)
+}
+}
+
+@content = {
+@uiLayouts.main_content(
+article = article,
+sidebar = sidebar,
+mainContentHeader = mainContentHeader,
+serviceInfo = serviceInfo,
+getHelpForm = getHelpForm)
+}
+
+@hmrcGovUkTemplate(Some(title), None)(head, bodyEnd, insideHeader, afterHeader, footerTop, Some(uiLayouts.footer_links()), true)(content)
