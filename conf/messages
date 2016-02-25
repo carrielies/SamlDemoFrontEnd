@@ -1,4 +1,6 @@
 
+saml.navTitle  = SAML
+
 ## Welcome
 saml.welcome.title = Saml Title
 saml.welcome.header = Saml Header
