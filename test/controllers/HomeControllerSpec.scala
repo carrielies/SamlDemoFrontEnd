@@ -87,5 +87,3 @@ class HomeControllerSpec extends PlaySpec with OneServerPerSuite with MockitoSug
   }
 
 }
-
-
