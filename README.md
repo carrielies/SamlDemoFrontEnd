@@ -12,6 +12,7 @@ to start service navigate to cloned project
 
 sbt run
 
+# Sandy
 
 url is
 http://localhost:9000/saml
