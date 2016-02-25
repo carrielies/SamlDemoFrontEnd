@@ -2,7 +2,7 @@
 saml.navTitle  = SAML
 
 ## Welcome
-saml.welcome.title = Saml Title
+saml.welcome.title = Welcome Saml Service Provider
 saml.welcome.header = Saml Header
 saml.welcome.text = text
 
